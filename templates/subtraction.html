@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2 class="content-subhead">Subtracting Binary Numbers</h2>
+
+<p>
+Binary subtraction works a lot like decimal subtraction — except it only uses the digits <strong>0</strong> and <strong>1</strong>. When subtraction isn't possible directly, we borrow — just like we do in base-10 — but the borrowing rules are slightly different in binary.
+</p>
+
+<h3>Binary Subtraction Rules</h3>
+<p>Here are the key combinations to remember:</p>
+<ul>
+    <li><code>0 − 0 = 0</code></li>
+    <li><code>1 − 0 = 1</code></li>
+    <li><code>1 − 1 = 0</code></li>
+    <li><code>0 − 1 = 1 (borrow required)</code></li>
+</ul>
+
+<h3>Understanding Borrowing</h3>
+<p>
+In decimal, we borrow a <strong>10</strong> when subtracting something larger than the current digit. In binary, we borrow a <strong>2</strong>, which is written as <code>10</code>. That’s why when subtracting <code>1</code> from <code>0</code>, we “borrow” and turn it into <code>10</code>.
+</p>
+
+<h3>Example: Subtract 0110 (6) from 1001 (9)</h3>
+
+<pre>
+  1001
+- 0110
+-------
+</pre>
+
+<ol>
+    <li>1 − 0 = 1</li>
+    <li>0 − 1 → borrow → 10 − 1 = 1</li>
+    <li>0 − 1 → borrow again → 10 − 1 = 1</li>
+    <li>1 − 0 = 1</li>
+</ol>
+
+<p><strong>Final result: <code>0011</code></strong></p>
+
+<h3>More Complex Borrowing</h3>
+<p>
+Sometimes, borrowing requires reaching multiple places to the left before finding a <code>1</code>. In such cases, each borrow turns into a <code>10</code>, and the position it was borrowed from becomes <code>0</code>. It's just like “chaining” your borrowing in decimal subtraction.
+</p>
+
+<p>
+Always remember: to verify your binary subtraction, just convert both binary numbers to decimal, subtract, and then check if the binary result equals the expected decimal result.
+</p>
+
+<div style="text-align:center; margin: 2em 0;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/-VoKAG2zH94"
+        title="Binary Subtraction Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <p style="font-size: 0.9em; color: #555;">
+        Video by <a href="https://www.youtube.com/watch?v=-VoKAG2zH94" target="_blank">Learning Vibes</a> on YouTube
+    </p>
+</div>
+
+{% endblock %}

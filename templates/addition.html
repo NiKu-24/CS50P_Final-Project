@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2 class="content-subhead">Adding Binary Numbers</h2>
+
+<p>
+Binary addition might look intimidating at first, but it follows just a few simple rules. In fact, it's just like the addition you already know — only using <strong>0</strong> and <strong>1</strong> instead of 0–9.
+</p>
+
+<h3>Binary Addition Rules</h3>
+<p>These are the only combinations you need to remember:</p>
+<ul>
+    <li><code>0 + 0 = 0</code></li>
+    <li><code>0 + 1 = 1</code></li>
+    <li><code>1 + 0 = 1</code></li>
+    <li><code>1 + 1 = 10</code> → write 0 and carry 1</li>
+    <li><code>1 + 1 + 1 = 11</code> → write 1 and carry 1</li>
+</ul>
+
+<h3>Step-by-Step Example</h3>
+<p>Let’s add two binary numbers: <code>1011</code> and <code>0111</code>.</p>
+
+<pre>
+  1011
++ 0111
+-------
+</pre>
+
+<p>Start from the right:</p>
+<ol>
+    <li><strong>1 + 1 = 10</strong> → write 0, carry 1</li>
+    <li><strong>1 + 1 + 1 (carry) = 11</strong> → write 1, carry 1</li>
+    <li><strong>0 + 1 + 1 = 10</strong> → write 0, carry 1</li>
+    <li><strong>1 + 0 + 1 = 10</strong> → write 0, carry 1</li>
+    <li><strong>No more digits, but we still have a carry:</strong> write 1</li>
+</ol>
+
+<p>The result is: <code>10010</code></p>
+
+<h3>What Just Happened?</h3>
+<p>Binary addition is all about combining bits and carrying over when needed — just like you do in decimal. The biggest difference is that everything resets after 1 (because binary is base 2).</p>
+
+<p>And just like in regular math, we can double-check our work. The numbers <code>1011</code> (11 in decimal) and <code>0111</code> (7 in decimal) should equal 18. Sure enough, <code>10010</code> in binary = 18!</p>
+
+<h3>Why It Matters</h3>
+<p>This isn’t just theory — this is how every computer in the world performs arithmetic. Whether it’s your calculator app or a self-driving car’s AI, it all starts with these simple rules.</p>
+
+<div style="text-align:center; margin: 2em 0;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/RgklPQ8rbkg"
+        title="Binary Addition Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <p style="font-size: 0.9em; color: #555;">
+        Video by <a href="https://www.youtube.com/watch?v=RgklPQ8rbkg" target="_blank">Khan Academy</a> on YouTube
+    </p>
+</div>
+
+{% endblock %}

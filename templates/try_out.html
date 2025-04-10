@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br><br>
+
+<!-- Decimal to Binary -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out" style="display: flex; align-items: center; gap: 1em; flex-wrap: wrap;">
+        <label for="decimal_input"><strong>Decimal → Binary</strong></label>
+        <input type="number" name="decimal_input" id="decimal_input" placeholder="Enter decimal"
+               value="{{ request.form.get('decimal_input', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Convert</button>
+
+        {% if binary %}
+        <span><strong>Decimal:</strong> {{ request.form.get("decimal_input") }}</span>
+        <span><strong>Binary:</strong> {{ binary }}</span>
+        {% endif %}
+    </form>
+</div>
+
+<!-- Binary to Decimal -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out" style="display: flex; align-items: center; gap: 1em; flex-wrap: wrap;">
+        <label for="binary_input"><strong>Binary → Decimal</strong></label>
+        <input type="text" name="binary_input" id="binary_input" placeholder="Enter binary"
+               value="{{ request.form.get('binary_input', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Convert</button>
+
+        {% if decimal %}
+        <span><strong>Binary:</strong> {{ request.form.get("binary_input") }}</span>
+        <span><strong>Decimal:</strong> {{ decimal }}</span>
+        {% endif %}
+    </form>
+</div>
+<!-- Binary Calculations -->
+<div class="content">
+    <h3 style="margin-top: 1em; text-align: left; color: #333;">Binary Calculations</h3>
+</div>
+
+<!-- Addition -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out"
+          style="display: flex; align-items: center; justify-content: flex-start; gap: 1em; flex-wrap: wrap;">
+        <input type="text" name="add_input_1" placeholder="Binary 1" style="width: 120px;"
+               value="{{ request.form.get('add_input_1', '') }}" required>
+        <span>+</span>
+        <input type="text" name="add_input_2" placeholder="Binary 2" style="width: 120px;"
+               value="{{ request.form.get('add_input_2', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        {% if binary_add %}
+        <span><strong>{{ request.form.get('add_input_1') }} + {{ request.form.get('add_input_2') }} =</strong> {{ binary_add }}</span>
+        {% endif %}
+    </form>
+</div>
+
+<!-- Subtraction -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out"
+          style="display: flex; align-items: center; justify-content: flex-start; gap: 1em; flex-wrap: wrap;">
+        <input type="text" name="subtract_input_1" placeholder="Binary 1" style="width: 120px;"
+               value="{{ request.form.get('subtract_input_1', '') }}" required>
+        <span>−</span>
+        <input type="text" name="subtract_input_2" placeholder="Binary 2" style="width: 120px;"
+               value="{{ request.form.get('subtract_input_2', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        {% if binary_subtract %}
+        <span><strong>{{ request.form.get('subtract_input_1') }} − {{ request.form.get('subtract_input_2') }} =</strong> {{ binary_subtract }}</span>
+        {% endif %}
+    </form>
+</div>
+
+<!-- Multiplication -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out"
+          style="display: flex; align-items: center; justify-content: flex-start; gap: 1em; flex-wrap: wrap;">
+        <input type="text" name="multiply_input_1" placeholder="Binary 1" style="width: 120px;"
+               value="{{ request.form.get('multiply_input_1', '') }}" required>
+        <span>×</span>
+        <input type="text" name="multiply_input_2" placeholder="Binary 2" style="width: 120px;"
+               value="{{ request.form.get('multiply_input_2', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        {% if binary_multiply %}
+        <span><strong>{{ request.form.get('multiply_input_1') }} × {{ request.form.get('multiply_input_2') }} =</strong> {{ binary_multiply }}</span>
+        {% endif %}
+    </form>
+</div>
+
+<!-- Division -->
+<div class="content">
+    <form class="pure-form" method="post" action="/try_out"
+          style="display: flex; align-items: center; justify-content: flex-start; gap: 1em; flex-wrap: wrap;">
+        <input type="text" name="divide_input_1" placeholder="Binary 1" style="width: 120px;"
+               value="{{ request.form.get('divide_input_1', '') }}" required>
+        <span>÷</span>
+        <input type="text" name="divide_input_2" placeholder="Binary 2" style="width: 120px;"
+               value="{{ request.form.get('divide_input_2', '') }}" required>
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        {% if binary_divide %}
+        <span><strong>{{ request.form.get('divide_input_1') }} ÷ {{ request.form.get('divide_input_2') }} =</strong> {{ binary_divide }}</span>
+        {% endif %}
+    </form>
+</div>
+
+{% endblock %}

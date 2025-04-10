@@ -1,0 +1,52 @@
+<!-- templates/layout.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Binary Basics – Learn, Convert, Calculate">
+    <title>Binary Basics</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div id="layout">
+    <!-- Hamburger -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <span></span>
+    </a>
+
+    <!-- Sidebar -->
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="/">Binary Basics</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/binary" class="pure-menu-link">Binary System</a></li>
+                <li class="pure-menu-item"><a href="/addition" class="pure-menu-link">Addition</a></li>
+                <li class="pure-menu-item"><a href="/subtraction" class="pure-menu-link">Subtraction</a></li>
+                <li class="pure-menu-item"><a href="/multiplication" class="pure-menu-link">Multiplication</a></li>
+                <li class="pure-menu-item"><a href="/division" class="pure-menu-link">Division</a></li>
+                <li class="pure-menu-item"><a href="/try_out" class="pure-menu-link" target="_blank">Try It Yourself</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main page -->
+    <div id="main">
+        <div class="header">
+            <h1>Binary Basics</h1>
+            <h2>Learn, Convert, Calculate</h2>
+        </div>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='css/ui.js') }}"></script>
+</body>
+</html>

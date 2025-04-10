@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+    integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="/">Binary Basics</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/binary" class="pure-menu-link">Binary System</a></li>
+                <li class="pure-menu-item"><a href="/addition" class="pure-menu-link">Addition</a></li>
+                <li class="pure-menu-item"><a href="/subtraction" class="pure-menu-link">Subtraction</a></li>
+                <li class="pure-menu-item"><a href="/multiplication" class="pure-menu-link">Multiplication</a></li>
+                <li class="pure-menu-item"><a href="/division" class="pure-menu-link">Division</a></li>
+                <li class="pure-menu-item"><a href="/try_out" class="pure-menu-link" target="_blank">Try It Yourself</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Binary Basics</h1>
+            
+<h2>Learn, Convert, Calculate</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead">History (Where We See It):</h2>
+            <p>
+            Welcome to the fascinating history of the binary system! While it's the backbone of modern computers, the idea of using just two states to represent information has roots stretching back centuries. Discover the early instances and ingenious ways binary concepts have appeared throughout history, long before the digital age.<br><br> The history of the binary system dates back to ancient times, with evidence of its use in various cultures for different purposes:
+            </p>
+
+            <h2 class="content-subhead">Early Precursors:</h2>
+            <p>
+            •	Ancient China (I Ching): Around the 9th century BC, the I Ching, a classic Chinese text, utilized a system of hexagrams composed of broken and solid lines. While not a formal binary system for arithmetic, these lines can be interpreted as representing two states (yin and yang), and the sequence of hexagrams has a correspondence to binary numbers, which fascinated Gottfried Leibniz centuries later.<br><br>
+            •	Ancient India (Pingala): In the 5th-2nd centuries BC, the Indian scholar Pingala used a binary system to describe prosody in Sanskrit poetry in his work Chandashutram.<br><br>
+            •	Other Cultures: There's evidence of binary or binary-like systems used for divination in traditional African systems and medieval Western geomancy. The Mangareva people of French Polynesia also used a hybrid binary-decimal system before 1450.<br><br>
+            •	Slit Drums: Across Africa and Asia, slit drums with two distinct tones have been used to encode messages, essentially a binary form of communication.
+            </p>
+
+            <h2 class="content-subhead">Formalization and Early Applications:</h2>
+            <p>
+            •	Francis Bacon (1605): He discussed a system where letters of the alphabet could be represented by sequences of binary digits.5 These could then be subtly encoded in text by using variations in font. Importantly, Bacon noted this could be applied to any objects with two distinct states, such as bells, trumpets, lights, or muskets, suggesting an early concept of binary encoding for general information.<br><br>
+            •	Juan Caramuel y Lobkowitz (1670): The Spanish clergyman published work on the binary system, which is considered the first known publication on the topic in Europe.<br><br>
+            •	Gottfried Wilhelm Leibniz (late 17th - early 18th century): Leibniz is widely credited with formalizing the modern binary number system. He was fascinated by its simplicity and potential. He saw a symbolic connection between binary numbers (0 and 1) and the Christian idea of creation from nothing. He also noted the correspondence between his binary system and the hexagrams of the I Ching. While he developed the arithmetic of binary numbers, he didn't find practical applications for it during his lifetime.<br><br>
+            •	George Boole (19th century - 1847): His work on Boolean algebra, a system of logic based on two states (true/false, or 1/0) and logical operations (AND, OR, NOT), laid the theoretical foundation for the binary system's eventual use in computing.
+            </p>
+
+            <h2 class="content-subhead">•	Early 20th Century (Pre-Computer Era):</h2>
+            <p>o	Telecommunications: Binary principles started to find practical use in areas like telegraphy and switching circuits.<br><br>
+                o	Emile Baudot (1875): He incorporated the addition of binary strings into his ciphering system, which eventually contributed to the development of ASCII.<br><br>
+                o	Linotype Machine (1884): This machine used a binary-coded slide rail to sort matrices.<br><br>
+                o	Early Counting Devices: Researchers like C. E. Wynn-Williams (1932) developed binary counters.<br><br>
+            In summary, while the formal mathematical framework was developed later, the concept of representing information and performing tasks using two distinct states has roots in various ancient practices. Early applications focused on encoding information and basic switching mechanisms before the advent of modern computers.
+            </p>
+
+        <div class="sources" style="margin-top: 2em; font-size: 0.9em; color: #555;">
+            <p><strong>Sources used:</strong></p>
+            <ul>
+                <li><a href="https://cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/" target="_blank">ACM – The Binary System Was Created Long Before Leibniz</a></li>
+                <li><a href="https://asiatimes.com/2017/07/leibniz-chinese-invented-first-binary-code/" target="_blank">Asia Times – Leibniz & the Chinese Binary Code</a></li>
+                <li><a href="https://www.britannica.com/technology/Linotype" target="_blank">Britannica – Linotype</a></li>
+                <li><a href="https://chandrahasblogs.wordpress.com/2020/04/22/how-pingala-created-the-binary-number-system/" target="_blank">Chandrahas Blog – How Pingala Created the Binary Number System</a></li>
+                <li><a href="https://www.computinghistory.org.uk/det/69200/Eryl-Wynn-Williams-Invents-the-Scale-of-Two-Counter/" target="_blank">Computing History – Eryl Wynn-Williams: Scale of Two Counter</a></li>
+                <li><a href="https://www.cuemath.com/learn/pingala-mathematician/" target="_blank">Cuemath – Pingala Mathematician</a></li>
+                <li><a href="https://www.ece.unb.ca/tervo/ee4253/baudot.shtml" target="_blank">ECE UNB – The Baudot Code</a></li>
+                <li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Caramuel/" target="_blank">MacTutor – Biography of Juan Caramuel y Lobkowitz</a></li>
+                <li><a href="https://www.sololearn.com/blog/binary-explained/" target="_blank">SoloLearn – Binary Explained</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Binary_code" target="_blank">Wikipedia – Binary Code</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">Wikipedia – Binary Number</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/George_Boole#:~:text=In%201847%2C%20Boole%20developed%20Boolean,design%20and%20modern%20computer%20science." target="_blank">Wikipedia – George Boole</a></li>
+                <li><a href="https://www.xataka.com/historia-tecnologica/adn-nuestros-ordenadores-tiene-4400-anos-esta-sorprendente-historia-sistema-binario" target="_blank">Xataka – La sorprendente historia del sistema binario</a></li>
+            </ul>
+        </div>
+        
+        <div style="text-align:center; margin: 2em 0;">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/cZH0YnFpjwU"
+                title="Binary System Explained"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-credits" style="font-size: 0.9em; color: #555; margin-top: 1em; text-align: left;">
+            <p><strong>Meet the Creators</strong></p>
+            <p>
+                Educator: Alessandra King<br>
+                Director: Michael Kalopaidis<br>
+                Script Editor: Alex Gendler<br>
+                Producer: Zedem Media<br>
+                Illustrator: Jeanne Bornet<br>
+                Animator: Maria Savva<br>
+                Sound Designer: Andreas Trachonitis<br>
+                Associate Producer: Jessica Ruby<br>
+                Content Producer: Gerta Xhelo<br>
+                Editorial Producer: Alex Rosenthal<br>
+                Narrator: Julianna Zarzycki
+            
+            <p style="text-align: left; font-size: 0.9em;">
+                Video: <a href="https://ed.ted.com/lessons/a-brief-history-of-numerical-systems-alessandra-king" target="_blank">Source Page</a>
+            </p>
+            
+        </div>
+        
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='css/ui.js') }}"></script>
+
+</body>
+</html>

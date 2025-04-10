@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2 class="content-subhead">Understanding Binary Numbers</h2>
+
+<p>
+Binary numbers — just 1s and 0s — might seem confusing at first, but they're actually very straightforward once you see how they work. Computers love binary because everything can be broken down into two states: ON or OFF, True or False, 1 or 0.
+</p>
+
+<p>
+The binary system is called <strong>base-2</strong>. Each digit (called a <em>bit</em>) represents a power of 2, moving from right to left:
+</p>
+
+<p>
+<code>... 32 | 16 | 8 | 4 | 2 | 1</code>
+</p>
+
+<h3>Example: Convert 30 to Binary</h3>
+<p>
+We subtract powers of 2:
+</p>
+<ul>
+    <li>30 - 16 → 14 → add a 1</li>
+    <li>14 - 8 → 6 → add a 1</li>
+    <li>6 - 4 → 2 → add a 1</li>
+    <li>2 - 2 → 0 → add a 1</li>
+    <li>No 1s left → add a 0</li>
+</ul>
+<p><strong>Result:</strong> <code>11110</code></p>
+
+<h3>Another Example: Convert 41 to Binary</h3>
+<p>
+Following the same logic:
+</p>
+<ul>
+    <li>41 - 32 → 9 → 1</li>
+    <li>9 - 8 → 1 → 1</li>
+    <li>Remaining 1 → ends with a 1</li>
+</ul>
+<p><strong>Result:</strong> <code>101001</code></p>
+
+<hr>
+
+<div style="text-align:center; margin: 2em 0;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/FrsgHUSZ_pc"
+        title="Binary Numbers Explained"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <p style="font-size: 0.9em; color: #555;">
+        Video by <a href="https://www.youtube.com/watch?v=FrsgHUSZ_pc" target="_blank">Dr. Trefor Bazett</a> on YouTube
+    </p>
+</div>
+
+{% endblock %}

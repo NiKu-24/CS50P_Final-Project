@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2 class="content-subhead">Multiplying Binary Numbers</h2>
+
+<p>
+Binary multiplication is just like decimal multiplication — you line up digits and multiply each one, shifting as you go. The good news? You only have to memorize three rules:
+</p>
+
+<h3>Binary Multiplication Rules</h3>
+<ul>
+    <li><code>0 × 0 = 0</code></li>
+    <li><code>0 × 1 = 0</code></li>
+    <li><code>1 × 1 = 1</code></li>
+</ul>
+
+<p>
+The rest is just about lining things up and adding them — exactly like the multiplication algorithm you use in base 10.
+</p>
+
+<h3>Example: Multiply 9 × 5 in Binary</h3>
+<p>
+Let’s say you want to multiply:
+</p>
+<ul>
+    <li><strong>9</strong> in binary: <code>1001</code></li>
+    <li><strong>5</strong> in binary: <code>0101</code></li>
+</ul>
+
+<p>
+You perform the multiplication digit by digit, shifting left just like in base 10:
+</p>
+
+<pre>
+      1001   (9)
+×     0101   (5)
+------------
+      1001       (1001 × 1)
++   0000         (1001 × 0, shifted one place)
++ 1001           (1001 × 1, shifted two places)
+------------
+  101101        = 45 in decimal
+</pre>
+
+<p>
+Each step is just 1s and 0s. The real work is making sure your place values line up. If two 1s overlap when added, you use binary addition rules to carry.
+</p>
+
+<h3>Verification</h3>
+<p>
+You can always verify your result by converting both binary numbers to decimal, multiplying, and checking the binary result. In this case, 9 × 5 = 45 — and <code>101101</code> is indeed 45 in binary!
+</p>
+
+<div style="text-align:center; margin: 2em 0;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/xHWKYFhhtJQ"
+        title="Binary Multiplication Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <p style="font-size: 0.9em; color: #555;">
+        Video by <a href="https://www.youtube.com/watch?v=xHWKYFhhtJQ" target="_blank">Khan Academy</a> on YouTube
+    </p>
+</div>
+
+{% endblock %}
