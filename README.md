@@ -1,9 +1,7 @@
 
 # Binary Basics: Learn, Convert, and Calculate in Binary
 
-#### Video Demo: [Link coming soon]
-
----
+#### Video Demo: https://www.youtube.com/watch?v=BM0jY9t10Ls
 
 ## 📘 Project Description
 
@@ -11,7 +9,14 @@ This project is an educational and interactive tool to help users understand and
 
 The web application is built using Python and Flask, with a lightweight responsive UI powered by PureCSS. Each topic includes educational content, and users can test the concepts interactively via a "Try It Yourself" panel.
 
----
+#### Video Description:
+In this CS50P Final Project video, I present 'Binary Basics: Learn, Convert, and Calculate in Binary' — a Flask-based web application that helps users understand and explore binary number operations.
+The video starts with a personal introduction, followed by a walkthrough of the project’s file structure and a quick overview of the main logic in project.py.
+I then run the app from the terminal and open it in the browser to showcase the homepage and individual tutorial pages, including one functioning embedded video.
+Next, I demonstrate the interactive calculator, highlighting the division feature with floating-point results, and showing an error case for division by zero.
+
+This project combines explanation, demonstration, and reflection to support learning binary concepts in a simple, hands-on way.
+
 
 ## 💻 How to Install and Run
 
@@ -43,19 +48,31 @@ The web application is built using Python and Flask, with a lightweight responsi
 
 ---
 
-## 📂 Project Files
+## 📂 Project File Structure Overview
+```
+CS50P_Final_Project/
+├── project.py               # Main Flask app: routes + binary logic
+├── test_project.py          # Unit tests for core functions (pytest)
+├── requirements.txt         # Python dependencies (Flask, pytest)
+├── README.md                # Project documentation
+│
+├── static/
+│   ├── css/
+│   │   └── styles.css       # Custom CSS for layout and visuals
+│   └── js/
+│       └── ui.js            # Sidebar behavior
+│
+├── templates/               # HTML templates rendered by Flask
+│   ├── layout.html          # Base layout (PureCSS sidebar)
+│   ├── index.html           # Homepage: binary history and introduction
+│   ├── binary.html          # Intro to binary
+│   ├── addition.html        # Binary addition tutorial and video
+│   ├── subtraction.html     # Binary subtraction explanation and video
+│   ├── multiplication.html  # Binary multiplication guide with video
+│   ├── division.html        # Binary division with float support + videos
+│   └── try_out.html         # Interactive converter & calculator
+```
 
-- `project.py`: Main Python file containing the Flask app and all binary operation logic.
-- `test_project.py`: Contains pytest tests for each of the key functions.
-- `requirements.txt`: Lists the Python packages needed to run the project.
-- `templates/`: HTML files used to create different pages in the web app.
-    - `index.html`: Homepage with introduction and binary history.
-    - `addition.html`, `subtraction.html`, etc.: Topic-specific explanation pages.
-    - `try_out.html`: Interactive binary calculator.
-- `static/css/styles.css`: Custom styles for the UI.
-- `static/css/ui.js`: JavaScript to manage the sidebar toggle.
-
----
 
 ## 🧠 Design & Implementation Notes
 
@@ -70,5 +87,3 @@ My main focus was to deliver a working system that offers a good user experience
 The most challenging part was implementing binary division with floating-point results. I had to learn how binary fractions work and translate that logic into Python code. It took time to understand and implement it correctly, but it was also the most rewarding part of the project.
 
 In the end, I was surprised by how many components were involved, even in a relatively small project. I learned about Flask, HTML, CSS, and the importance of structuring and testing code. This project helped me see the bigger picture of how all parts of a web application come together.
-
----
